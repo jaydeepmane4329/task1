@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="list.css" />
+    <title>List</title>
+  </head>
+  <body>
+    <header>
+      <li><img id="img" src="Images/images (1).jfif" alt="" /></li>
+      <li>To-Do App</li>
+      <li class="right"><a href="/list.html">List</a></li>
+      <li class="right"><a href="index.html">Home</a></li>
+    </header>
+    <section>
+      <table>
+        <thead>
+          <th>Task Id</th>
+          <th>Task Name</th>
+          <th>Description about the task *</th>
+          <th>Time *</th>
+          <th>Task status</th>
+          <th>Image hyperlink</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Gym</td>
+            <td>Going to Gym for 2 hours</td>
+            <td>5:00 pm</td>
+            <td>Open</td>
+            <td>
+              <a style="color: blue" href="#" onclick="showImage()"
+                >See Image</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <dialog id="dilog">
+        <button onclick="hideImage()">Close</button>
+        <figure>
+          <img src="/Images/gym.jpg" height="200px" width="200px" alt="" />
+        </figure>
+      </dialog>
+    </section>
+    <footer>
+      <p>Copyright &copy; Jay</p>
+    </footer>
+    <script src="list.js"></script>
+  </body>
+</html>
