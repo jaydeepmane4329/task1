@@ -4,16 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Home.css" />
-    <title>Home</title>
+    <link rel="stylesheet" href="list.css">
+    <title>To_DO</title>
   </head>
   <body>
+
+    <!-- Header -->
     <header>
       <li><img id="img" src="Images/images (1).jfif" alt="" /></li>
       <li>To-Do App</li>
-      <li class="right"><a href="list.html">List</a></li>
-      <li class="right"><a href="/">Home</a></li>
+      <li class="right" style="cursor: pointer;"><a onclick="list()">List</a></li>
+      <li class="right"><a href="index.html">Home</a></li>
     </header>
-    <section>
+
+    <!-- Section1 for Home component -->
+    <section id="homeComponent">
+
+      <!-- Banner Image -->
       <div class="banner_container">
         <figure class="banner">
           <img src="images/banner.jpg" alt="" width="100%" height="60%" />
@@ -23,6 +30,8 @@
           >
         </figure>
       </div>
+
+      <!-- Video dailog -->
       <div class="video_container">
         <dialog id="dilouge">
           <button id="btn" onclick="closePopUp()">close</button>
@@ -31,10 +40,95 @@
           </video>
         </dialog>
       </div>
+
     </section>
+
+    <!-- Section2 for list component -->
+    <section id="listComponent">
+
+      <!-- Table -->
+      <table>
+        <thead>
+          <th>data</th>
+          <th>Task Name</th>
+          <th>Description about the task *</th>
+          <th>Time *</th>
+          <th>Task status</th>
+          <th>Image hyperlink</th>
+          <th>Images</th>
+        </thead>
+        <tbody>
+          <tr id="data">
+            <td>1</td>
+            <td>Gym</td>
+            <td>Going to Gym for 2 hours</td>
+            <td>5:00 pm</td>
+            <td>Open</td>
+            <td>
+            <!-- Event For show Image Dialog -->
+              <a style="color: blue; cursor: pointer;" onclick="showImage()"
+                >See Image</a
+              >
+            </td>
+            <td>
+              </div>
+
+              <!-- Corousal Images -->
+              <div class="carousel">
+                <div class="carousel__item">
+                  <img
+                    src="/Images/banner.jpg"
+                    height="200px"
+                    width="200px"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel__item">
+                  <img
+                    src="/Images/gym.jpg"
+                    height="200px"
+                    width="200px"
+                    alt=""
+                  />
+                </div>
+                <div class="carousel__item">
+                  <img
+                    src="Images/design.jfif"
+                    height="200px"
+                    width="200px"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Dialog box for show image -->
+      <dialog id="dilog">
+        <!-- Event to hide image dialog -->
+        <button onclick="hideImage()">&times;</button>
+        <figure>
+          <img src="/Images/gym.jpg" height="200px" width="200px" alt="" />
+        </figure>
+      </dialog>
+
+        <!-- Pop up for carousal images-->
+      <div class="popUp_image">
+        <span>&times;</span>
+          <img src="/Images/gym.jpg" alt="">
+        </div>
+    </section>
+   
+
+    <!-- Footer -->
     <footer>
       <p>Copyright &copy; Jay</p>
     </footer>
+
+    <!-- Scripts for both Home and list component -->
     <script src="Home.js"></script>
+    <script src="list.js"></script>
   </body>
 </html>

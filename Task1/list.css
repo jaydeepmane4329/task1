@@ -1,54 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header {
-  height: 90px;
-  background-color: rgb(52, 49, 49);
-  padding: 20px;
-}
-
-header img {
-  height: 50px;
-  width: 150px;
-  margin: 0px 0px 0px 70px;
-  border-radius: 50%;
-}
-
-header li {
-  display: inline-block;
-  font-size: 40px;
-  font-family: "Cedarville Cursive", cursive;
-  color: whitesmoke;
-}
-
-.right {
-  float: right;
-  font-family: cursive;
-  font-size: 25px;
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-  margin: 25px;
-  color: whitesmoke;
-}
-
-.show {
-  display: block;
-}
-
-section {
-  display: flex;
-  justify-content: center;
+#listComponent {
+  width: 100%;
 }
 table {
-  margin-top: 50px;
+  margin: 50px auto;
 }
 
 table th,
@@ -56,27 +12,116 @@ td {
   border: 1px solid black;
   padding: 30px;
 }
-footer {
-  text-align: center;
-  color: white;
-  background-color: black;
-  height: 100px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-dialog {
+#dialog {
   width: fit-content;
   height: fit-content;
   position: fixed;
   top: 250;
-  left: 1200;
-}
-button {
-  width: 200px;
+  left: 700px;
 }
 
-footer p {
-  line-height: 100px;
+dialog {
+  border: none;
+}
+
+button {
+  width: 200px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.carousel {
+  position: relative;
+}
+
+.carousel__item {
+  background: grey;
+  padding: 1em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #ffffff;
+  display: none;
+}
+
+.carousel__item--selected {
+  display: block;
+}
+
+.carousel__nav {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__button {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel__button--selected {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.carousel__item img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.popUp_image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.popUp_image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.popUp_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 700px) {
+  table {
+    width: 100px;
+    margin: 5px auto;
+  }
+  table th,
+  td {
+    border: 1px solid black;
+    padding: 0px;
+  }
+
+  .carousel__item img {
+    width: 100px;
+    height: 100px;
+  }
 }

@@ -8,8 +8,10 @@
 
 header {
   height: 90px;
-  background-color: rgb(52, 49, 49);
+  background-color: rgb(253, 242, 253);
   padding: 20px;
+  position: sticky;
+  top: 0;
 }
 
 header img {
@@ -21,9 +23,10 @@ header img {
 
 header li {
   display: inline-block;
+  color: rgb(252, 73, 73);
   font-size: 40px;
   font-family: "Cedarville Cursive", cursive;
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }
 
 .right {
@@ -36,7 +39,7 @@ header li {
 a {
   text-decoration: none;
   margin: 25px;
-  color: whitesmoke;
+  color: rgb(252, 73, 73);
 }
 
 .banner_container {
@@ -45,14 +48,16 @@ a {
 
 .banner {
   text-align: center;
-  box-shadow: 0px 0px 10px grey;
+  /* box-shadow: 0px 0px 5px darkorchid; */
 }
 
 footer {
   text-align: center;
-  color: white;
-  background-color: black;
-  height: 100px;
+  color: rgb(252, 73, 73);
+  height: 70px;
+  position: sticky;
+  bottom: 0;
+  background-color: rgb(253, 242, 253);
 }
 
 figcaption {
@@ -60,20 +65,75 @@ figcaption {
 }
 
 footer p {
-  line-height: 100px;
+  line-height: 60px;
+}
+
+#dilog {
+  border: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+#listComponent {
+  display: none;
+}
+
+section {
+  height: 600px;
 }
 
 #btn {
   width: fit-content;
-  color: white;
+  color: black;
   width: 500px;
-  background-color: rgb(136, 136, 229);
+  background-color: grey;
   border: none;
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .video_container {
   position: fixed;
-  top: 150;
-  left: 250;
+  top: 41%;
+  left: 35%;
   border: none;
+}
+
+video {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  header li {
+    font-size: 20px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  header img {
+    display: none;
+  }
+
+  .video_container {
+    position: fixed;
+    border: none;
+    left: 10;
+  }
+
+  dialog {
+    width: 100px;
+  }
+
+  video {
+    width: 200px;
+  }
+
+  #btn {
+    width: 200px;
+  }
 }
